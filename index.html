@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi App Glide con Notificaciones</title>
+    
+    <!-- Cargar OneSignal -->
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async></script>
+    <script>
+        window.OneSignal = window.OneSignal || [];
+        OneSignal.push(function() {
+            OneSignal.init({
+                appId: "55b2d013-a3b4-4d60-be8b-f4b46d43be69", // Reemplaza con tu App ID de OneSignal
+                safari_web_id: "TU-SAFARI-WEB-ID", // Solo si quieres soporte en iOS Safari
+                notifyButton: {
+                    enable: true
+                }
+            });
+        });
+    </script>
+
+    <style>
+        body { margin: 0; padding: 0; overflow: hidden; }
+        iframe { width: 100vw; height: 100vh; border: none; }
+    </style>
+</head>
+<body>
+    <!-- Cargar la app de Glide en un iframe -->
+    <iframe src="https://tuapp.glide.page"></iframe>
+</body>
+</html>
